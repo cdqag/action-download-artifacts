@@ -8,5 +8,3 @@ on:
 jobs:
   release:
     uses: cdqag/workflow-public/.github/workflows/release-action.yaml@v1
-    with:
-        runs-on: hosted-runner
