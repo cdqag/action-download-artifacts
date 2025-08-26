@@ -26,6 +26,10 @@ uses: cdqag/action-download-artifacts@v1
 
     Automatically unzip downloaded artifacts.
 
+* `clean` _Default_: `'false'`
+
+    Remove downloaded artifacts after use.
+
 ## License
 
 This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.

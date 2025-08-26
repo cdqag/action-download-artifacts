@@ -56,6 +56,12 @@ while IFS= read -r artifact; do
 	if [[ "$AUTO_UNZIP" == "true" ]]; then
 		echo "Unzipping..."
 		unzip -o "$artifact_zip_name"
+
+		if [[ "$CLEAN" == "true" ]]; then
+			echo "Cleaning up..."
+			rm -f "$artifact_zip_name"
+		fi
+
 		echo "Done"
 	fi
 

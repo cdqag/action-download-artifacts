@@ -23,6 +23,10 @@ inputs:
     description: Automatically unzip downloaded artifacts
     default: 'false'
 
+  clean:
+    description: Remove downloaded artifacts after use
+    default: 'false'
+
 runs:
   using: composite
   steps:
@@ -34,4 +38,5 @@ runs:
         # GITHUB_REPOSITORY is available by default
         NAME_PATTERN: ${{ inputs.name-pattern }}
         AUTO_UNZIP: ${{ inputs.auto-unzip }}
+        CLEAN: ${{ inputs.clean }}
       run: ${{ github.action_path }}/download.sh
